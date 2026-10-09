@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo de Robótica y Control</title>
+<style>
+  :root { --bar: #1d3f63; }
+  html, body { margin: 0; height: 100%; background: #111; overflow: hidden; font-family: 'Segoe UI', system-ui, sans-serif; }
+  #stage { position: absolute; inset: 0 0 44px 0; display: flex; align-items: center; justify-content: center; }
+  #slides > svg[data-marpit-svg] { display: none; }
+  #slides > svg[data-marpit-svg].on { display: block; }
+  #slides { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+  #slides > svg { max-width: 100%; max-height: 100%; width: auto; height: 100%; aspect-ratio: 16 / 9; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; background: var(--bar); color: #fff;
+         display: flex; align-items: center; gap: 6px; padding: 0 10px; font-size: 14px; }
+  #bar button { background: rgba(255,255,255,.12); color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
+  #bar button:hover { background: rgba(255,255,255,.25); }
+  #count { margin: 0 8px; min-width: 60px; text-align: center; }
+  #bar .sp { flex: 1; }
+  #msg { color: #ddd; font-size: 18px; }
+  #toc { position: absolute; left: 0; top: 0; bottom: 44px; width: 320px; background: #fff; overflow-y: auto; transform: translateX(-100%);
+         transition: transform .2s; z-index: 5; box-shadow: 4px 0 20px rgba(0,0,0,.4); }
+  #toc.open { transform: none; }
+  #toc a { display: block; padding: 10px 16px; color: #1e293b; text-decoration: none; border-bottom: 1px solid #eee; font-size: 15px; }
+  #toc a:hover, #toc a.cur { background: #e8f0f8; }
+  body.fs #bar { opacity: 0; transition: opacity .3s; } body.fs #bar:hover { opacity: 1; }
+  body.fs #stage { bottom: 0; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="slides"><div id="msg">Cargando presentación…</div></div></div>
+<nav id="toc"></nav>
+<div id="bar">
+  <button id="btnToc" title="Índice (O)">☰ Índice</button>
+  <button id="prev" title="Anterior (←)">◀</button>
+  <span id="count">–</span>
+  <button id="next" title="Siguiente (→)">▶</button>
+  <span class="sp"></span>
+  <button id="btnFs" title="Pantalla completa (F)">⛶ Pantalla completa</button>
+</div>
+
+<script type="module">
+import { Marp } from 'https://cdn.jsdelivr.net/npm/@marp-team/marp-core@4/+esm';
+
+// ?md=archivo.md (o URL) — por defecto la presentación del grupo
+const params = new URLSearchParams(location.search);
+const mdUrl = params.get('md') || 'GrupoRoboticaControl.md';
+const base = new URL(mdUrl, location.href);
+
+const slidesEl = document.getElementById('slides');
+const tocEl = document.getElementById('toc');
+const countEl = document.getElementById('count');
+let svgs = [], cur = 0;
+
+try {
+  const res = await fetch(base);
+  if (!res.ok) throw new Error(res.status + ' al cargar ' + base);
+  const md = await res.text();
+  const marp = new Marp({ html: true, inlineSVG: true });
+  const { html, css } = marp.render(md);
+
+  const style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  // Rutas relativas (images/...) se resuelven respecto al .md
+  tmp.querySelectorAll('img[src], video[src], source[src], iframe[src]').forEach(el => {
+    const s = el.getAttribute('src');
+    if (s && !/^(https?:|data:|\/\/|#)/i.test(s)) el.setAttribute('src', new URL(s, base).href);
+  });
+  tmp.querySelectorAll('section').forEach(sec => {
+    const bg = sec.style.backgroundImage;
+    if (bg && bg.includes('url(')) sec.style.backgroundImage = bg.replace(/url\(["']?(?!https?:|data:)([^"')]+)["']?\)/g, (m, p) => `url("${new URL(p, base).href}")`);
+  });
+
+  const marpit = tmp.querySelector('.marpit') || tmp;
+  slidesEl.innerHTML = '';
+  slidesEl.className = 'marpit';
+  svgs = [...marpit.querySelectorAll(':scope > svg[data-marpit-svg]')];
+  svgs.forEach(s => slidesEl.appendChild(s));
+
+  svgs.forEach((s, i) => {
+    const h = s.querySelector('h1, h2');
+    const a = document.createElement('a');
+    a.href = '#' + (i + 1);
+    a.textContent = (i + 1) + '. ' + (h ? h.textContent.trim() : (s.querySelector('img')?.alt || 'Diapositiva'));
+    a.onclick = e => { e.preventDefault(); go(i); tocEl.classList.remove('open'); };
+    tocEl.appendChild(a);
+  });
+
+  const start = parseInt(location.hash.slice(1), 10);
+  go(Number.isFinite(start) ? start - 1 : 0);
+} catch (e) {
+  slidesEl.innerHTML = '<div id="msg">No se pudo cargar la presentación: ' + e.message + '</div>';
+}
+
+function go(i) {
+  if (!svgs.length) return;
+  cur = Math.max(0, Math.min(svgs.length - 1, i));
+  svgs.forEach((s, k) => s.classList.toggle('on', k === cur));
+  countEl.textContent = (cur + 1) + ' / ' + svgs.length;
+  [...tocEl.children].forEach((a, k) => a.classList.toggle('cur', k === cur));
+  history.replaceState(null, '', location.search + '#' + (cur + 1));
+}
+function fs() {
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+  else document.exitFullscreen?.();
+}
+document.addEventListener('fullscreenchange', () => document.body.classList.toggle('fs', !!document.fullscreenElement));
+
+document.getElementById('prev').onclick = () => go(cur - 1);
+document.getElementById('next').onclick = () => go(cur + 1);
+document.getElementById('btnFs').onclick = fs;
+document.getElementById('btnToc').onclick = () => tocEl.classList.toggle('open');
+document.getElementById('stage').onclick = e => { if (!e.target.closest('a, button, video, iframe')) go(cur + (e.clientX > innerWidth / 3 ? 1 : -1)); };
+
+addEventListener('keydown', e => {
+  if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === 'Home') go(0);
+  else if (e.key === 'End') go(svgs.length - 1);
+  else if (e.key.toLowerCase() === 'f') fs();
+  else if (e.key.toLowerCase() === 'o') tocEl.classList.toggle('open');
+  else if (e.key === 'Escape') tocEl.classList.remove('open');
+});
+let tx = null;
+addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
+addEventListener('touchend', e => { if (tx === null) return; const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) go(cur + (d < 0 ? 1 : -1)); tx = null; });
+</script>
+</body>
+</html>
