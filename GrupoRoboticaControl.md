@@ -109,14 +109,14 @@ style: |
 <!-- _class: cover -->
 <!-- _backgroundColor: #2b5b8c -->
 <!-- _backgroundImage: "radial-gradient(circle at 45% 100%, #6fa8c8 0%, #2b5b8c 55%, #1d3f63 100%)" -->
-<img class="cover-title" src="images/title_text.png" alt="Grupo de Robótica y Control" />
-<img class="cover-logo" src="images/tecnun_white.png" alt="Tecnun Universidad de Navarra" />
-<img class="cover-robot" src="images/humanoide1.png" alt="Robot humanoide" />
+<img class="cover-title" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/title_text.png" alt="Grupo de Robótica y Control" />
+<img class="cover-logo" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_white.png" alt="Tecnun Universidad de Navarra" />
+<img class="cover-robot" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/humanoide1.png" alt="Robot humanoide" />
 
 ---
 
 # Quiénes somos
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="two">
 <div class="lead">
@@ -126,13 +126,13 @@ Grupo multidisciplinar que investiga y desarrolla soluciones de **robótica**, *
 Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologías hápticas, integrando *control avanzado*, *IA*, *visión artificial*, *realidad aumentada* y *gemelos digitales*.
 
 </div>
-<img src="images/ur.png" alt="Robot colaborativo" />
+<img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/ur.png" alt="Robot colaborativo" />
 </div>
 
 ---
 
 # Visión general del grupo
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="cards c4">
 <div class="card"><h3>Personas</h3><ul><li>Investigadores actuales</li><li>Doctorandos actuales</li><li>Incorporaciones previstas</li></ul></div>
@@ -145,17 +145,17 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 
 <!-- _class: people -->
 # Investigadores y doctorandos
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 | Persona | Perfil | Línea / actividad | Situación |
 |---|---|---|---|
-| Sebastián Gutiérrez <img class="avatar" src="images/sebastian.jpg"> | Investigador/a ♪ | Robótica · Control · IA | Tecnun |
-| Jorge Juan Gil <img class="avatar" src="images/jorge.jpg"> | Investigador/a | Robótica · Control · IA | Tecnun |
-| Diego Borro Yagüez <img class="avatar" src="images/diego.jpg"> | Investigador/a ↑ | Visión · IA | Tecnun |
-| Iñaki Díaz Garmendia <img class="avatar" src="images/inaki.jpg"> | Investigador/a | Robótica · Control | Ceit |
-| Emilio Sánchez Tapia <img class="avatar" src="images/emilio.jpg"> | Investigador/a | Robótica | Ceit |
-| Wilson Brian Mesa <img class="avatar" src="images/wilson.jpg"> | Doctorando/a ↓ | Robótica · Control | Tecnun |
-| Julie Laurent <img class="avatar" src="images/julie.jpg"> | Técnico/a | Robótica | Tecnun |
+| Sebastián Gutiérrez <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/sebastian.jpg"> | Investigador/a ♪ | Robótica · Control · IA | Tecnun |
+| Jorge Juan Gil <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/jorge.jpg"> | Investigador/a | Robótica · Control · IA | Tecnun |
+| Diego Borro Yagüez <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/diego.jpg"> | Investigador/a ↑ | Visión · IA | Tecnun |
+| Iñaki Díaz Garmendia <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/inaki.jpg"> | Investigador/a | Robótica · Control | Ceit |
+| Emilio Sánchez Tapia <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/emilio.jpg"> | Investigador/a | Robótica | Ceit |
+| Wilson Brian Mesa <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/wilson.jpg"> | Doctorando/a ↓ | Robótica · Control | Tecnun |
+| Julie Laurent <img class="avatar" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/julie.jpg"> | Técnico/a | Robótica | Tecnun |
 
 <div class="two" style="grid-template-columns: 1.3fr 1fr; margin-top: 14px;">
 <div class="growth">
@@ -175,7 +175,7 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 ---
 
 # Líneas de investigación
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="two">
 <div class="lead" style="font-size: 24px; line-height:1.45;">
@@ -189,14 +189,14 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 - IoT y sistemas conectados para Industria 4.0
 
 </div>
-<img src="images/humanoide2.png" alt="Robot humanoide" />
+<img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/humanoide2.png" alt="Robot humanoide" />
 </div>
 
 ---
 
 <!-- _class: projects -->
 # Proyectos de investigación 2023 – 2026
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 | Nombre | Acrónimo | Rol | Convocatoria | Tipo | Importe | Inicio | Fin | Comentario |
 |---|---|---|---|---|---|---|---|---|
@@ -214,19 +214,19 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 
 <!-- _class: equip -->
 # Equipamiento actual
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="cards c4">
-<div class="card"><h3>Robótica</h3><ul><li>Franka Emika Panda</li><li>Franka Research 3 (FR3)</li><li>Stäubli TX60</li><li>Fanuc LR Mate 200iB</li><li>Fanuc M-10iA</li><li>Gripper Robotiq</li><li>Robot cartesiano Aula Biele</li><li>Mitsubishi PA-10 <span class="tag">(Descontinuado)</span></li></ul><img src="images/franka.png"></div>
-<div class="card"><h3>Visión</h3><ul><li>Intel RealSense D405</li><li>Sensórica</li></ul><img src="images/realsense.png"><h3 style="margin-top:22px">Háptica</h3><ul><li>Phantom Premium 1.5</li><li>Phantom Premium 1.0</li><li>Phantom Omni ×3</li></ul><img src="images/phantom.png"></div>
-<div class="card"><h3>Control</h3><ul><li>PLC Beckhoff</li><li>Jetson Nano</li><li>Arduino R4 Wifi</li><li>Arduino Q</li></ul><img src="images/plc.png"></div>
-<div class="card"><h3>Simulación</h3><ul><li>RoboDK</li></ul><img src="images/robodk.png"></div>
+<div class="card"><h3>Robótica</h3><ul><li>Franka Emika Panda</li><li>Franka Research 3 (FR3)</li><li>Stäubli TX60</li><li>Fanuc LR Mate 200iB</li><li>Fanuc M-10iA</li><li>Gripper Robotiq</li><li>Robot cartesiano Aula Biele</li><li>Mitsubishi PA-10 <span class="tag">(Descontinuado)</span></li></ul><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/franka.png"></div>
+<div class="card"><h3>Visión</h3><ul><li>Intel RealSense D405</li><li>Sensórica</li></ul><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/realsense.png"><h3 style="margin-top:22px">Háptica</h3><ul><li>Phantom Premium 1.5</li><li>Phantom Premium 1.0</li><li>Phantom Omni ×3</li></ul><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/phantom.png"></div>
+<div class="card"><h3>Control</h3><ul><li>PLC Beckhoff</li><li>Jetson Nano</li><li>Arduino R4 Wifi</li><li>Arduino Q</li></ul><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/plc.png"></div>
+<div class="card"><h3>Simulación</h3><ul><li>RoboDK</li></ul><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/robodk.png"></div>
 </div>
 
 ---
 
 # Equipamiento previsto
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="cards c3">
 <div class="card"><h3>Robótica avanzada</h3><ul><li>Robot humanoide para docencia / investigación</li><li>Robot cuadrúpedo</li><li>Manos y grippers sensorizados</li></ul><div class="prio"><span class="dot alta"></span>PRIORIDAD ALTA</div></div>
@@ -237,7 +237,7 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 ---
 
 # Objetivos estratégicos
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="goals">
 <div class="goal"><div class="ic">👤</div><b>Talento</b>Captar talento investigador</div>
@@ -254,12 +254,12 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 <!-- _class: splash -->
 <!-- _paginate: false -->
 <!-- _footer: '' -->
-<img src="images/tr_logo.png" alt="tecnun\ROBOTICS" />
+<img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tr_logo.png" alt="tecnun\ROBOTICS" />
 
 ---
 
 # Club de Robótica
-<img class="logo-corner" src="images/tecnun_red.png" />
+<img class="logo-corner" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_red.png" />
 
 <div class="lead" style="font-size: 26px;">
 
@@ -276,7 +276,7 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 <div style="font-size:18px"><span class="dot ok"></span>En marcha &nbsp; <span class="dot media"></span>En desarrollo &nbsp; <span class="dot alta"></span>Prevista</div>
 </div>
 <div class="robots">
-<img src="images/r2kt.png"><img src="images/dron.png" style="height:120px"><img src="images/rescate.png" style="height:150px">
+<img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/r2kt.png"><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/dron.png" style="height:120px"><img src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/rescate.png" style="height:150px">
 </div>
 </div>
 
@@ -285,6 +285,6 @@ Trabajamos en robótica industrial y colaborativa, robótica móvil y tecnologí
 <!-- _class: cover -->
 <!-- _backgroundColor: #e00000 -->
 <!-- _backgroundImage: "radial-gradient(circle at 45% 100%, #ff2a2a 0%, #e00000 60%, #b80000 100%)" -->
-<img class="cover-title" src="images/title_text.png" alt="Grupo de Robótica y Control" />
-<img class="cover-logo" src="images/tecnun_white.png" alt="Tecnun Universidad de Navarra" />
-<img class="cover-robot" style="height:62%" src="images/robot_final.png" alt="Robot" />
+<img class="cover-title" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/title_text.png" alt="Grupo de Robótica y Control" />
+<img class="cover-logo" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/tecnun_white.png" alt="Tecnun Universidad de Navarra" />
+<img class="cover-robot" style="height:62%" src="https://raw.githubusercontent.com/masteclab/tecnun-robotics/refs/heads/main/images/robot_final.png" alt="Robot" />
